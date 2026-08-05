@@ -1,0 +1,36 @@
+{
+  "name": "x-shorts-blocker",
+  "version": "0.1.0",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkizka/x-shorts-blocker.git"
+  },
+  "private": true,
+  "packageManager": "pnpm@11.20.0",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "format": "eslint --fix . && prettier --write --log-level warn .",
+    "lint": "eslint . && prettier --check . && web-ext lint --source-dir=src",
+    "prepare": "husky",
+    "zip": "node scripts/zip.js"
+  },
+  "devDependencies": {
+    "@mkizka/eslint-config": "^10.0.0",
+    "adm-zip": "^0.6.0",
+    "eslint": "^10.8.0",
+    "globals": "^17.9.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.3.0",
+    "prettier": "^3.9.6",
+    "prettier-plugin-pkg": "^0.22.1",
+    "web-ext": "^10.5.0"
+  },
+  "prettier": {
+    "plugins": [
+      "prettier-plugin-pkg"
+    ]
+  }
+}
