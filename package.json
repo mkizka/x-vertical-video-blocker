@@ -1,10 +1,10 @@
 {
-  "name": "x-shorts-blocker",
+  "name": "x-vertical-video-blocker",
   "version": "0.1.0",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mkizka/x-shorts-blocker.git"
+    "url": "git+https://github.com/mkizka/x-vertical-video-blocker.git"
   },
   "private": true,
   "packageManager": "pnpm@11.20.0",

@@ -34,7 +34,7 @@
   "host_permissions": ["https://x.com/*"],
   "browser_specific_settings": {
     "gecko": {
-      "id": "x-shorts-blocker@mkizka.net",
+      "id": "x-vertical-video-blocker@mkizka.net",
       "strict_min_version": "140.0",
       "data_collection_permissions": {
         "required": ["none"]

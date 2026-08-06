@@ -1,4 +1,4 @@
-# X Shorts Blocker
+# X Vertical Video Blocker
 
 <img src="assets/icon.svg" width="128" height="128" alt="" />
 

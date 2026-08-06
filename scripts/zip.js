@@ -34,5 +34,5 @@ for (const [target, buildManifest] of Object.entries(targets)) {
     "manifest.json",
     Buffer.from(JSON.stringify(manifest, null, 2) + "\n"),
   );
-  zip.writeZip(`dist/x-shorts-blocker-${version}-${target}.zip`);
+  zip.writeZip(`dist/x-vertical-video-blocker-${version}-${target}.zip`);
 }
