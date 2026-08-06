@@ -4,6 +4,8 @@
 
 A Chrome/Firefox extension that blocks X (formerly Twitter)'s vertically scrollable video player and switches back to the normal player.
 
+<img src="assets/compare.png" width="640" alt="Before and after comparison" />
+
 ## Usage
 
 Install on Firefox for Android or a Chrome-extension-compatible mobile browser. It works automatically, no setup needed.
