@@ -12,7 +12,7 @@ Install on Firefox for Android or a Chrome-extension-compatible mobile browser. 
 
 ## How it works
 
-It detects the media viewer URL (`https://x.com/{user}/status/{id}/mediaviewer`) and rewrites it to the normal video player URL (`.../video/1`).
+It detects the media viewer URL (`https://x.com/{user}/status/{id}/mediaViewer`) and rewrites it to the normal video player URL (`.../video/1`).
 
 ## Credits
 

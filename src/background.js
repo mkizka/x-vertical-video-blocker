@@ -1,4 +1,4 @@
-const MEDIA_VIEWER_PATH_PATTERN = /^(\/[^/]+\/status\/\d+)\/mediaviewer$/i;
+const MEDIA_VIEWER_PATH_PATTERN = /^(\/[^/]+\/status\/\d+)\/mediaViewer$/;
 
 chrome.webNavigation.onHistoryStateUpdated.addListener(
   (details) => {
