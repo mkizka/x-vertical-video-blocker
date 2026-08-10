@@ -1,0 +1,14 @@
+{
+  "extends": [
+    "@tsconfig/node-lts/tsconfig.json",
+    "@tsconfig/strictest/tsconfig.json"
+  ],
+  "compilerOptions": {
+    "lib": ["ES2024", "DOM"],
+    "types": ["chrome", "node"],
+    "allowJs": true,
+    "checkJs": true,
+    "noEmit": true
+  },
+  "include": ["src/**/*.js", "scripts/**/*.js"]
+}

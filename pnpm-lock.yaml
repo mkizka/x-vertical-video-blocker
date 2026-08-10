@@ -10,6 +10,18 @@ importers:
       "@mkizka/eslint-config":
         specifier: ^10.0.0
         version: 10.0.0(@typescript-eslint/eslint-plugin@8.66.0(@typescript-eslint/parser@8.66.0(eslint@10.8.0(supports-color@7.2.0))(supports-color@7.2.0)(typescript@6.0.3))(eslint@10.8.0(supports-color@7.2.0))(supports-color@7.2.0)(typescript@6.0.3))(eslint@10.8.0(supports-color@7.2.0))(supports-color@7.2.0)(typescript@6.0.3)
+      "@tsconfig/node-lts":
+        specifier: 24.0.0
+        version: 24.0.0
+      "@tsconfig/strictest":
+        specifier: 2.0.8
+        version: 2.0.8
+      "@types/chrome":
+        specifier: 0.2.5
+        version: 0.2.5
+      "@types/node":
+        specifier: 26.2.0
+        version: 26.2.0
       adm-zip:
         specifier: ^0.6.0
         version: 0.6.0
@@ -31,6 +43,9 @@ importers:
       prettier-plugin-pkg:
         specifier: ^0.22.1
         version: 0.22.1(prettier@3.9.6)
+      typescript:
+        specifier: 6.0.3
+        version: 6.0.3
       web-ext:
         specifier: ^10.5.0
         version: 10.5.0(supports-color@7.2.0)
@@ -352,6 +367,24 @@ packages:
       }
     engines: { node: ">=12" }
 
+  "@tsconfig/node-lts@24.0.0":
+    resolution:
+      {
+        integrity: sha512-8mSTqWwCd6aQpvxSrpQlMoA9RiUZSs7bYhL5qsLXIIaN9HQaINeoydrRu/Y7/fws4bvfuyhs0BRnW9/NI8tySg==,
+      }
+
+  "@tsconfig/strictest@2.0.8":
+    resolution:
+      {
+        integrity: sha512-XnQ7vNz5HRN0r88GYf1J9JJjqtZPiHt2woGJOo2dYqyHGGcd6OLGqSlBB6p1j9mpzja6Oe5BoPqWmeDx6X9rLw==,
+      }
+
+  "@types/chrome@0.2.5":
+    resolution:
+      {
+        integrity: sha512-DwLFgwj3D0zjxRBhQ3610RBso2g+yI1cakq/JdIGopZ9Bc5UhQluyfcLGZwivFE4t2h4b2QZYZhPV7KylExSbA==,
+      }
+
   "@types/esrecurse@4.3.1":
     resolution:
       {
@@ -362,6 +395,24 @@ packages:
     resolution:
       {
         integrity: sha512-GhdPgy1el4/ImP05X05Uw4cw2/M93BCUmnEvWZNStlCzEKME4Fkk+YpoA5OiHNQmoS7Cafb8Xa3Pya8m1Qrzeg==,
+      }
+
+  "@types/filesystem@0.0.36":
+    resolution:
+      {
+        integrity: sha512-vPDXOZuannb9FZdxgHnqSwAG/jvdGM8Wq+6N4D/d80z+D4HWH+bItqsZaVRQykAn6WEVeEkLm2oQigyHtgb0RA==,
+      }
+
+  "@types/filewriter@0.0.33":
+    resolution:
+      {
+        integrity: sha512-xFU8ZXTw4gd358lb2jw25nxY9QAgqn2+bKKjKOYfNCzN4DKCFetK7sPtrlpg66Ywe3vWY9FNxprZawAh9wfJ3g==,
+      }
+
+  "@types/har-format@1.2.16":
+    resolution:
+      {
+        integrity: sha512-fluxdy7ryD3MV6h8pTfTYpy/xQzCFC7m89nOH9y94cNqJ1mDIDPut7MnRHI3F6qRmh/cT2fUjG1MLdCNb4hE9A==,
       }
 
   "@types/json-schema@7.0.15":
@@ -376,10 +427,10 @@ packages:
         integrity: sha512-Klz949h02Gz2uZCMGwDUSDS1YBlTdDDgbWHi+81l29tQALUtvz4rAYi5uoVhE5Lagoq6DeqAUlbrHvW/mXDgdQ==,
       }
 
-  "@types/node@26.1.2":
+  "@types/node@26.2.0":
     resolution:
       {
-        integrity: sha512-Vu4a5UFA9rIIFJ7rB/Vaafh9lrCQszopTCx6KjFboXTGQbPNasehVR5TEiithSDGyd1DEiUByggTZsg8jukeIg==,
+        integrity: sha512-5IviulTZeRNp2vAJ514cc/HUlY5nZ9fCbq9DMyC52BrhFZACo3nI0R7qBxhQmo/d27NFe96ur/b7Wwxklda+kg==,
       }
 
   "@typescript-eslint/eslint-plugin@8.66.0":
@@ -2923,15 +2974,32 @@ snapshots:
       "@pnpm/network.ca-file": 1.0.2
       config-chain: 1.1.13
 
+  "@tsconfig/node-lts@24.0.0": {}
+
+  "@tsconfig/strictest@2.0.8": {}
+
+  "@types/chrome@0.2.5":
+    dependencies:
+      "@types/filesystem": 0.0.36
+      "@types/har-format": 1.2.16
+
   "@types/esrecurse@4.3.1": {}
 
   "@types/estree@1.0.9": {}
+
+  "@types/filesystem@0.0.36":
+    dependencies:
+      "@types/filewriter": 0.0.33
+
+  "@types/filewriter@0.0.33": {}
+
+  "@types/har-format@1.2.16": {}
 
   "@types/json-schema@7.0.15": {}
 
   "@types/minimatch@3.0.5": {}
 
-  "@types/node@26.1.2":
+  "@types/node@26.2.0":
     dependencies:
       undici-types: 8.3.0
 
@@ -3199,7 +3267,7 @@ snapshots:
 
   chrome-launcher@1.2.0(supports-color@7.2.0):
     dependencies:
-      "@types/node": 26.1.2
+      "@types/node": 26.2.0
       escape-string-regexp: 4.0.0
       is-wsl: 2.2.0
       lighthouse-logger: 2.0.2(supports-color@7.2.0)

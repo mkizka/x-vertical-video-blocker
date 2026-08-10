@@ -10,7 +10,7 @@ chrome.runtime.onMessage.addListener((message) => {
 
   const observer = new MutationObserver(() => {
     const button = document.querySelector(PLAY_BUTTON_SELECTOR);
-    if (button === null) {
+    if (!(button instanceof HTMLElement)) {
       return;
     }
     button.click();

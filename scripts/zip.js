@@ -2,19 +2,29 @@ import { mkdirSync, readFileSync } from "node:fs";
 
 import AdmZip from "adm-zip";
 
+/**
+ * @typedef {{
+ *   version: string,
+ *   background: { scripts: string[], service_worker: string, type: string },
+ *   browser_specific_settings: unknown,
+ * }} Manifest
+ */
+
+/** @type {Manifest} */
 const baseManifest = JSON.parse(readFileSync("src/manifest.json", "utf-8"));
 const { version } = baseManifest;
 
 const targets = {
-  chrome: (manifest) => {
-    const result = { ...manifest };
-    delete result.browser_specific_settings;
-    result.background = {
+  /** @param {Manifest} manifest */
+  chrome: (manifest) => ({
+    ...manifest,
+    browser_specific_settings: undefined,
+    background: {
       service_worker: manifest.background.service_worker,
       type: manifest.background.type,
-    };
-    return result;
-  },
+    },
+  }),
+  /** @param {Manifest} manifest */
   firefox: (manifest) => ({
     ...manifest,
     background: {
